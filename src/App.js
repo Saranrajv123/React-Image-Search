@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import unSplash from './api/unSplash';
 import Search from './components/Search';
+import ImageList from './components/ImagesList';
 
 
 class App extends Component {
@@ -22,7 +23,7 @@ class App extends Component {
     return (
       <div className="ui container" style={{ marginTop: '10px' }}>
         <Search onsubmit={this.onSubmitSearch} />
-        Found: { this.state.images.length }
+        <ImageList images={this.state.images} />
       </div>
     );
   }
